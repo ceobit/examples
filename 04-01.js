@@ -49,7 +49,7 @@ console.log(text8.includes('Java'));
 // 9
 let firstChar = text3.slice(0, 1);
 let lastChar = text3.slice(-1);
-let restChars = text3.slice(1,-1);
+let restChars = text3.slice(1, -1);
 console.log(`${lastChar}${restChars}${firstChar}`);
 
 // 10
@@ -61,5 +61,5 @@ console.log(`My name is ${name}. I live in ${city} and I am a ${profession}`);
 // 11
 let text11 = 'the quick brown fox';
 let firstLetter = text11.slice(0, 1);
-let restLetters = text11.slice(1, text11.length);
+let restLetters = text11.slice(1);
 console.log(`${firstLetter.toUpperCase()}${restLetters}`);
