@@ -48,8 +48,8 @@ console.log(text8.includes('Java'));
 
 // 9
 let firstChar = text3.slice(0, 1);
-let lastChar = text3.slice(text3.length - 1);
-let restChars = text3.slice(1, text3.length - 1);
+let lastChar = text3.slice(-1);
+let restChars = text3.slice(1,-1);
 console.log(`${lastChar}${restChars}${firstChar}`);
 
 // 10
