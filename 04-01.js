@@ -23,4 +23,5 @@ console.log(text3.substring(3,6));
 let text4 = 'nice shoes';
 console.log(text4.includes('l'));
 
-console.log(text3.charAt(0) + text3 + text3.charAt(0));
+let text5 = text3.charAt(0) + text3 + text3.charAt(0);
+console.log(text5);
