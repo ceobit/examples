@@ -11,10 +11,7 @@ let str = 'JavaScript';
 let num = 100500;
 console.log(str+num);
 
-const isEvenNumber = (num) => {
-  let result = num % 2 === 0 ? '30' : num;
-  console.log(result);
-}
+const isEvenNumber = num => console.log(num % 2 === 0 ? '30' : num);
 
 isEvenNumber(33);
 isEvenNumber(40);
