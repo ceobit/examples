@@ -44,7 +44,7 @@ console.log(Math.max(-1, 2, 3, 4));
 // 2. Rounding
 // a. Round up
 // Round up each of the following numbers to the nearest integer: 3321.32321, 326.76, 76788.7, -9.78, 43.342.
-const roundUp = (num) => console.log(Math.ceil(num));
+const roundUp = num => console.log(Math.ceil(num));
 roundUp(3321.32321);
 roundUp(326.76);
 roundUp(76788.7);
@@ -52,7 +52,7 @@ roundUp(-9.78);
 roundUp(43.342);
 //   b. Round down
 // Round down each of the following numbers to the nearest integer: 3321.32321, 326.76, 76788.7, -9.78, 28.329.
-const roundDown = (num) => console.log(Math.floor(num));
+const roundDown = num => console.log(Math.floor(num));
 roundDown(3321.32321);
 roundDown(326.76);
 roundDown(76788.7);
