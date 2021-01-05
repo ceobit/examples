@@ -18,3 +18,18 @@ isEvenNumber(40);
 isEvenNumber(2);
 isEvenNumber(1);
 isEvenNumber(22);
+
+// Create a variable with the value of “123”. Convert it to a number.
+// Create a variable with the value of “130.7". Convert it to a number.
+// Declare a variable named isDog. If true, print ‘pat, pat’ and if not, print ‘find me a dog to pat!’
+
+
+let num1 = parseInt('123'); // or let num1 = +'123';
+console.log(num1);
+
+
+let num2 = parseFloat('130.7'); // or let num2 = +'130.7';
+console.log(num2);
+
+let isDog;
+console.log(isDog ? `pat, pat` : `find me a dog to pat!`);
