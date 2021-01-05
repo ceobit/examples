@@ -63,3 +63,4 @@ let text11 = 'the quick brown fox';
 let firstLetter = text11.slice(0, 1);
 let restLetters = text11.slice(1);
 console.log(`${firstLetter.toUpperCase()}${restLetters}`);
+
