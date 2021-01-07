@@ -53,6 +53,7 @@ roundUp(43.342);
 //   b. Round down
 // Round down each of the following numbers to the nearest integer: 3321.32321, 326.76, 76788.7, -9.78, 28.329.
 const roundDown = num => console.log(Math.floor(num));
+
 roundDown(3321.32321);
 roundDown(326.76);
 roundDown(76788.7);
@@ -80,3 +81,7 @@ console.log(num3);
 let str4 = '10.05';
 let num4 = parseFloat(str4);
 console.log(num4);
+
+let JS = 'JavaScript';
+console.log(JS.slice(-3));
+
