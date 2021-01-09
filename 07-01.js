@@ -5,7 +5,15 @@
 //   Your task is to return an integer (0 or 1), whose the parity bit you need to add to the binary representation so that the parity of the resulting string is as expected.
 
 function checkParity(parity, bin) {
-  const result = bin.split("1").length - 1 % 2 === 0 ? parity === 'even' ? 0 : 1 : parity === 'even' ? 1 : 0;
+  const result = bin.split("1");
+    // % 2 === 0
+    // ? parity === 'even'
+    //   ? 0
+    //   : 1
+    // : parity === 'even'
+    //   ? 1
+    //   : 0;
+
   console.log(result);
 }
 
