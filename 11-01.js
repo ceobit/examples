@@ -77,7 +77,6 @@ const printCrazyNumbers = () => {
   console.log(set.repeat(3));
 
   // 3 variant
-  // 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
   let countNum = 0;
   text = '';
   for (let i = 1; i < 4;) {
