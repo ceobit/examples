@@ -1,5 +1,4 @@
-
-const nameArr = ['roman','natalia'];
+const nameArr = ['roman', 'natalia'];
 for (let i = 0; i < nameArr.length; i++) {
   console.log(`${nameArr[i][0].toUpperCase()}${nameArr[i].slice(1)}`);
 }
@@ -8,7 +7,7 @@ for (let i = 0; i < nameArr.length; i++) {
 //   Write a program that will iterate from 0 to 20. For each iteration,
 //   it will check if the current number is even or odd, and report that to the screen (e.g. “2 is even”).
 
-for (let i = 0; i <= 20; i++ ) {
+for (let i = 0; i <= 20; i++) {
   i % 2 === 0 ? console.log(`${i} is even`) : console.log(`${i} is odd`);
 }
 
@@ -61,15 +60,37 @@ const printCrazyNumbers = () => {
   }
   console.log(set);
 
-
+  // 1 variant
   set = '';
   let j = 0;
-  for (let i = 1; i <= 15; i++) {
-    i % 5 === 0 ? j = 0 : j++
-      set += j + ' ';
-    }
+  for (let i = 0; i < 15; i++) {
+    i % 5 === 0 ? j = 0 : j++;
+    set += j + ' ';
+  }
   console.log(set);
 
-}
+  // 2 variant
+  set = '';
+  for (let i = 0; i <= 4; i++) {
+    set += i + ' ';
+  }
+  console.log(set.repeat(3));
+
+  // 3 variant
+  // 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
+  let countNum = 0;
+  text = '';
+  for (let i = 1; i < 4;) {
+    text += countNum + ' ';
+    if (countNum !== 0 && countNum % 4 === 0) {
+      i++;
+      countNum = 0;
+    } else {
+      countNum++;
+    }
+  }
+  console.log(text);
+
+};
 
 printCrazyNumbers();
