@@ -3,3 +3,66 @@ const nameArr = ['roman','natalia'];
 for (let i = 0; i < nameArr.length; i++) {
   console.log(`${nameArr[i][0].toUpperCase()}${nameArr[i].slice(1)}`);
 }
+
+console.log(11==66);
+
+// The odd/even reporter.
+//   Write a program that will iterate from 0 to 20. For each iteration,
+//   it will check if the current number is even or odd, and report that to the screen (e.g. “2 is even”).
+
+for (let i = 0; i <= 20; i++ ) {
+  i % 2 === 0 ? console.log(`${i} is even`) : console.log(`${i} is odd`);
+}
+
+//Write programs that produce the following outputs:
+// 100 200 300 400 500 600 700 800 900 1000
+// 0 2 4 6 8 10
+// 3 6 9 12 15
+// 9 8 7 6 5 4 3 2 1 0
+// 1 1 1 2 2 2 3 3 3 4 4 4
+// 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+
+let set = '';
+const printCrazyNumbers = () => {
+  for (let i = 100; i <= 1000; i = i + 100) {
+    set = set + i + ' ';
+  }
+  console.log(set);
+
+  set = '';
+  for (let i = 0; i <= 10; i = i + 2) {
+    set = set + i + ' ';
+  }
+  console.log(set);
+
+  set = '';
+  for (let i = 3; i <= 15; i = i + 3) {
+    set = set + i + ' ';
+  }
+  console.log(set);
+
+  set = '';
+  for (let i = 9; i >= 0; i--) {
+    set = set + i + ' ';
+  }
+  console.log(set);
+
+  set = '';
+  for (let i = 1; i < 5; i++) {
+    for (let j = 0; j < 3; j++) {
+      set = set + i + ' ';
+    }
+  }
+  console.log(set);
+
+  set = '';
+  for (let i = 0; i <= 4; i++) {
+    for (let j = 0; j <= 4; j++) {
+      set = set + j + ' ';
+    }
+  }
+  console.log(set);
+
+}
+
+printCrazyNumbers();
