@@ -23,32 +23,32 @@ for (let i = 0; i <= 20; i++ ) {
 let set = '';
 const printCrazyNumbers = () => {
   for (let i = 100; i <= 1000; i = i + 100) {
-    set = set + i + ' ';
+    set += i + ' ';
   }
   console.log(set);
 
   set = '';
   for (let i = 0; i <= 10; i = i + 2) {
-    set = set + i + ' ';
+    set += i + ' ';
   }
   console.log(set);
 
   set = '';
   for (let i = 3; i <= 15; i = i + 3) {
-    set = set + i + ' ';
+    set += i + ' ';
   }
   console.log(set);
 
   set = '';
   for (let i = 9; i >= 0; i--) {
-    set = set + i + ' ';
+    set += i + ' ';
   }
   console.log(set);
 
   set = '';
   for (let i = 1; i < 5; i++) {
     for (let j = 0; j < 3; j++) {
-      set = set + i + ' ';
+      set += i + ' ';
     }
   }
   console.log(set);
@@ -56,7 +56,7 @@ const printCrazyNumbers = () => {
   set = '';
   for (let i = 0; i <= 2; i++) {
     for (let j = 0; j <= 4; j++) {
-      set = set + j + ' ';
+      set += j + ' ';
     }
   }
   console.log(set);
