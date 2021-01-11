@@ -22,19 +22,19 @@ for (let i = 0; i <= 20; i++ ) {
 
 let set = '';
 const printCrazyNumbers = () => {
-  for (let i = 100; i <= 1000; i = i + 100) {
+  for (let i = 100; i <= 1000; i += 100) {
     set += i + ' ';
   }
   console.log(set);
 
   set = '';
-  for (let i = 0; i <= 10; i = i + 2) {
+  for (let i = 0; i <= 10; i += 2) {
     set += i + ' ';
   }
   console.log(set);
 
   set = '';
-  for (let i = 3; i <= 15; i = i + 3) {
+  for (let i = 3; i <= 15; i += 3) {
     set += i + ' ';
   }
   console.log(set);
