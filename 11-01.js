@@ -20,8 +20,8 @@ for (let i = 0; i <= 20; i++ ) {
 // 1 1 1 2 2 2 3 3 3 4 4 4
 // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
 
-let set = '';
 const printCrazyNumbers = () => {
+  let set = '';
   for (let i = 100; i <= 1000; i += 100) {
     set += i + ' ';
   }
@@ -59,6 +59,15 @@ const printCrazyNumbers = () => {
       set += j + ' ';
     }
   }
+  console.log(set);
+
+
+  set = '';
+  let j = 0;
+  for (let i = 1; i <= 15; i++) {
+    i % 5 === 0 ? j = 0 : j++
+      set += j + ' ';
+    }
   console.log(set);
 
 }
