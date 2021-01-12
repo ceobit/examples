@@ -90,6 +90,35 @@ const printCrazyNumbers = () => {
   }
   console.log(text);
 
+  // 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
+  let countNum2 = 0;
+  text = '';
+  for (let i = 1; i <= 4;) {
+    if (countNum2 !== 0 && countNum2 % 4 === 0) {
+      i++;
+      countNum2 = 0;
+    }
+    countNum2++;
+    text += i + ' ';
+  }
+  console.log(text);
+
 };
 
 printCrazyNumbers();
+
+const countOccurrenes = (str, chr) => str.split(chr).length - 1;
+console.log(countOccurrenes('this is a string', 'i'));
+// console.log(countOccurrenes('this is a string', 'i'));
+
+const makePass = () => {
+  let text = '';
+  const possible = 'abcdefghijklmnopqrstuvwxyz';
+
+  for (let i = 0; i < 20; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  console.log(text);
+};
+
+makePass();
