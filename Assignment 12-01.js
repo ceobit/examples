@@ -125,14 +125,27 @@ Be creative and show us your Artistic side
 
 const draw = () => {
   console.log('First shape');
-  for (let i = 1; i < 4; i++) {
-    console.log(`${'T'.repeat(i)}`);
+
+  let picture1 = '';
+  for (let i = 1; i <= 4; i++) {
+    i > 1 ? picture1 += '\n': null;
+    for (let j = 1; j <= i; j++) {
+      picture1 += 'T';
+    }
   }
+  console.log(picture1);
 
   console.log('Second shape');
-  for (let i = 4; i > 0; i--) {
-    console.log(`${'*'.repeat(i)}`);
+
+  let picture2 = '';
+  for (let i = 4; i >= 1; i--) {
+    i < 4 ? picture2 += '\n': null;
+    for (let j = 1; j <= i; j++) {
+      picture2 += '*';
+    }
   }
+  console.log(picture2);
+
   console.log('Third shape');
   let j = '';
   for (let i = 1; i <= 5; i++) {
@@ -142,14 +155,14 @@ const draw = () => {
 
   console.log('Forth shape');
 
-  let str = '';
+  let picture4 = '';
   for (let i = 1; i <= 5; i++) {
     for (let j = 1; j <= 5; j++) {
-      str += `ʕ•ᴥ•ʔ`;
+      picture4 += `ʕ•ᴥ•ʔ`;
     }
-    str += `\n`;
+    picture4 += `\n`;
   }
-  console.log(str);
+  console.log(picture4);
 
 };
 
