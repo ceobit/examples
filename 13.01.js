@@ -19,8 +19,14 @@ const isEqualNumXandO = (text) => {
   return str.split('x').length - 1 === str.split('o').length - 1;
 }
 
-console.log(isEqualNumXandO('ooxx'));
-console.log(isEqualNumXandO('xooxx'));
-console.log(isEqualNumXandO('ooxXm'));
-console.log(isEqualNumXandO('zpzpzpp'));
-console.log(isEqualNumXandO('zzoo'));
+// console.log(isEqualNumXandO('ooxx'));
+// console.log(isEqualNumXandO('xooxx'));
+// console.log(isEqualNumXandO('ooxXm'));
+// console.log(isEqualNumXandO('zpzpzpp'));
+// console.log(isEqualNumXandO('zzoo'));
+
+
+
+
+
+
