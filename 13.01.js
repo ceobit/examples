@@ -16,10 +16,7 @@ const isEqualNumXandO = (text) => {
   if (!str.includes('x') && !str.includes('o')) {
     return true;
   }
-
   return str.split('x').length - 1 === str.split('o').length - 1;
-
-
 }
 
 console.log(isEqualNumXandO('ooxx'));
