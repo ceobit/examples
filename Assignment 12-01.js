@@ -128,7 +128,7 @@ const draw = () => {
 
   let picture1 = '';
   for (let i = 1; i <= 4; i++) {
-    i > 1 ? picture1 += '\n': null;
+    i > 1 ? picture1 += '\n' : null;
     for (let j = 1; j <= i; j++) {
       picture1 += 'T';
     }
@@ -139,7 +139,7 @@ const draw = () => {
 
   let picture2 = '';
   for (let i = 4; i >= 1; i--) {
-    i < 4 ? picture2 += '\n': null;
+    i < 4 ? picture2 += '\n' : null;
     for (let j = 1; j <= i; j++) {
       picture2 += '*';
     }
@@ -166,7 +166,7 @@ const draw = () => {
 
 };
 
-draw();
+// draw();
 
 console.log('--------Exercise 7-------');
 
@@ -221,7 +221,7 @@ const numbersCountReverse = () => {
 };
 numbersCountReverse();
 
-console.log("--------Exercise 8-------");
+console.log('--------Exercise 8-------');
 
 /* create a function should that checks if a store contains a specific product in it's inventory.
 for example:
@@ -233,14 +233,14 @@ inventoryCheck( "ham") returns false
 */
 
 const inventoryCheck = product => {
-  let storeArr= ["milk", "eggs", "cheese", "butter"];
+  let storeArr = ['milk', 'eggs', 'cheese', 'butter'];
   console.log(storeArr.includes(product));
-}
+};
 
-inventoryCheck("cheese");
-inventoryCheck( "ham");
+inventoryCheck('cheese');
+inventoryCheck('ham');
 
-console.log("--------Exercise 9-------");
+console.log('--------Exercise 9-------');
 // Extra work :)
 // create a repo for this app. we are coming later to it :)
 // Create a program that generate a random password with the length of 30 character, every time you call the function should give you a different password
@@ -264,4 +264,56 @@ passwordGen();
 passwordGen();
 passwordGen();
 
-console.log("--------END of Exercise-------");
+console.log('--------END of Exercise-------');
+
+// const common = (a, b, c) => {
+  // let sum = 0;
+  // let indB, indC;
+  // a.map((el) => {
+  //   indB = b.indexOf(el);
+  //   indC = c.indexOf(el);
+  //   if (indB > -1 && indC > -1) {
+  //     b.splice(indB,1);
+  //     c.splice(indC,1);
+  //     sum += el;
+  //   }
+  // })
+  // return sum;
+
+// let intersection = a.filter(x => {
+//   return b.indexOf(x) > -1;
+// })
+//   console.log(intersection);
+// };
+//
+// // common([1, 2, 3], [5, 3, 2], [7, 3, 2]);
+// //  common([1,2,2,3],[5,3,2,2],[7,3,2,2]);
+//  common([1,1,1,1],[1,1,1,0],[1,0,1,1]);
+
+
+
+console.log('////////////////////////////////////');
+
+// two ways of solving the drawing task
+const drawing = () => {
+
+  // First way
+  let picture = '';
+  for (let i = 1; i <= 4; i++) { // loop for each line
+    i > 1 ? picture += '\n' : null; // add newline character after each line
+    for (let j = 1; j <= i; j++) { //loop for each character
+      picture += 'T';
+    }
+  }
+  console.log(`${picture} \n`);
+
+  // Second way
+  let picture1 = 'T';
+  for (let i = 1; i <= 4; i++) {
+    console.log(picture1.repeat(i));
+  }
+}
+
+drawing();
+
+
