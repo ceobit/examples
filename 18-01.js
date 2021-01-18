@@ -56,7 +56,7 @@ checkAge(firstName, age);
 
 const capitalize = arr => {
   return arr.map(el => {
-    return el[0].toUpperCase() + el.slice(1);
+    return el[0].toUpperCase() + el.slice(1).toLowerCase();
   });
 }
 
@@ -94,7 +94,7 @@ greeting(['Maria', 'Mike', 'Paul', 'Doven']);
 //   [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
 
 const plusOrMinus = arr => {
-  return arr.map(el => {
+  return arr.map((el, i) => {
     return el % 2 === 0 ? el - 1 : el + 1;
   })
 }
