@@ -64,10 +64,10 @@ console.log(capitalize(['matt', 'sara', 'lara']));
 
 // City Names.
 //   Create an array of city names. Loop through the array and add the city names to a string. Examples:
-// [Berlin, Paris, Prague, Rome] ➞ expected output: “Berlin, Paris, Prague, Rome”.
+// [Berlin, Paris, Prague, Rome] ➞ expected output: “Berlin, Paris, Prague, Rome.”.
 
 const fromArrToStr = str => {
-  return str.join(', ');
+  return str.join(', ') + '.';
 }
 console.log(fromArrToStr(['Berlin', 'Paris', 'Prague', 'Rome']));
 
