@@ -23,7 +23,7 @@ console.log(repeat('Hello', 5));
 const greater = (arr, num) => {
  return arr.filter(el => el > num).join(', ');
 
- //second solution 
+ //second solution
  // let newArr = [];
  // arr.forEach(el => el > num ? newArr.push(el) : null)
  // return newArr.join(', ');
