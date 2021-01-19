@@ -15,7 +15,7 @@ const findVowels = str => {
       }
     }
   }
-return count;
+  return count;
 }
 
 console.log(findVowels('this is a striing'));
@@ -37,25 +37,6 @@ const findVowels2 = str => {
 
 console.log(findVowels2('this is a striing'));
 
-// first way
-// const findVowels = str => {
-//   const vowels = /[aeiou]/; //regular expression
-//   return str.split(vowels).length - 1;
-// }
-
-// console.log(findVowels('this is a string'));
-//
-// // second way
-// const findVowels1 = str => {
-//   const vowels = ['a','e','i','o','u'];
-//   const arrayFromStr = str.split('');
-//   let count = 0;
-//   arrayFromStr.forEach(el => vowels.indexOf(el) >= 0 ? count++ : null)
-//   return count;
-// }
-//
-// console.log(findVowels1('this is a string'));
-
 // No Duplicates!
 //   A set is a collection of unique items. A set can be formed from an array by removing all duplicate items.
 //   Create a program which transforms an array into a set of unique values. See the examples below. Example:
@@ -76,25 +57,6 @@ const unique = arr => {
 
 console.log(unique([1, 4, 4, 7, 7, 7]));
 
-
-
-//
-// //first way
-// const unique = arr => {
-//   return [...new Set(arr)];
-// }
-//
-// console.log(unique([1, 4, 4, 7, 7, 7]));
-//
-// //second way
-// const unique2 = arr => {
-//   return arr.reduce((uniq, item) =>
-//     uniq.includes(item) ? uniq : [...uniq, item], []);
-// }
-//
-// console.log(unique2([1, 4, 4, 7, 7, 7]));
-
-//
 // Dictionary. Create a function that takes an initial string and an array of words, and returns a
 // filtered array of the words that start with the same letters as the initial string.
 //   Notes:
@@ -104,27 +66,16 @@ console.log(unique([1, 4, 4, 7, 7, 7]));
 // dictionary(“bu”, [“button”, “breakfast”, “border”]) ➞ [“button”]
 // dictionary(“tri”, [“triplet”, “tries”, “trip”, “piano”, “tree”]) ➞ [“triplet”, “tries”, trip”]
 // dictionary(“beau”, [“pastry”, “delicious”, “name”, “boring”]) ➞ []
-//
-// const dictionary = (str, arr) => {
-//   let matchArr = [];
-//   arr.forEach(el => el.includes(str) ? matchArr.push(el) : null);
-//   return matchArr;
-// }
-//
-// console.log(dictionary('bu', ['button', 'breakfast', 'border']));
-// console.log(dictionary('tri', ['triplet', 'tries', 'trip', 'piano', 'tree']));
-// console.log(dictionary('beau', ['pastry', 'delicious', 'name', 'boring']));
 
-// const dictionary = (str, arr) => {
-//
-//   const auxArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i].includes(str)) {
-//       auxArr.push(arr[i]);
-//     }
-//   }
-//   return auxArr;
-// }
+const dictionary = (str, arr) => {
 
+  const auxArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(str)) {
+      auxArr.push(arr[i]);
+    }
+  }
+  return auxArr;
+}
 
 console.log(dictionary('ord', ['button', 'breakfast', 'border']));
