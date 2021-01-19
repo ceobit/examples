@@ -11,3 +11,19 @@ const repeat = (item ,times) => {
 
 console.log(repeat('Hello', 5));
 
+// The Greater Numbers.
+//   Create a function which accepts two arguments: the first argument being an array of numbers,
+//   and the second argument being a number. The function should return the elements of the array
+//   which are greater than the second argument.
+//   i.e.
+//   findGreatest([3, 4, 5], 4) ➞ 5
+// findGreatest([10, 20, 30], 12) ➞ 20, 30
+// findGreatest([0, 10, 3], 4) ➞ 10
+
+const greater = (arr, num) => {
+ return arr.filter(el => el > num).join(', ');
+}
+
+console.log(greater([3, 4, 5], 4));
+console.log(greater([10, 20, 30], 12));
+console.log(greater([0, 10, 3], 4));
