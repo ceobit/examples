@@ -25,15 +25,14 @@ const isEqualNumXandO = (text) => {
 // console.log(isEqualNumXandO('zpzpzpp'));
 // console.log(isEqualNumXandO('zzoo'));
 
-
-const isFirstSuperior = (array1, array2) => {
-  for (let j = 0; j < array1.length; j++) {
-    if (array1[j] > array2[j]) {
+const isFirstSuperior = (arr1, arr2) => {
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] > arr2[i]) {
       return true;
     }
   }
-    return false;
-};
+  return false;
+}
 
 console.log(isFirstSuperior(["a", "d", "c"], ["a", "b", "c"])); //true
 console.log(isFirstSuperior(["zebra", "ostrich", "whale"], ["ant", "ostrich", "whale"])); // true
