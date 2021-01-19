@@ -21,11 +21,12 @@ console.log(repeat('Hello', 5));
 // findGreatest([0, 10, 3], 4) ➞ 10
 
 const greater = (arr, num) => {
- // return arr.filter(el => el > num).join(', ');
+ return arr.filter(el => el > num).join(', ');
 
- let newArr = [];
- arr.forEach(el => el > num ? newArr.push(el) : null)
- return newArr.join(', ');
+ //second solution 
+ // let newArr = [];
+ // arr.forEach(el => el > num ? newArr.push(el) : null)
+ // return newArr.join(', ');
 }
 
 console.log(greater([3, 4, 5], 4));
