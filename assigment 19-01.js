@@ -3,6 +3,7 @@
 //   of vowels (i.e. in English, “a, e, i, o, u”) in the string.
 //   i.e. findVowels(“this is a string”)
 
+// first way
 // const findVowels = str => {
 //   const vowels = /[aeiou]/;
 //   return str.split(vowels).length - 1;
