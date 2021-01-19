@@ -6,9 +6,8 @@
 // (“example”, 3) ➞ [“example”, “example”, “example”]
 
 const repeat = (item ,times) => {
-  const arr = new Array(times);
-  return arr.fill(item);
-
+ return new Array(times).fill(item);
 }
 
 console.log(repeat('Hello', 5));
+
