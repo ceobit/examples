@@ -27,6 +27,7 @@ console.log('2 task');
 const exponent = (base, exp = 2) => {
   console.log(Math.pow(base, exp));
 }
+
 exponent(3,3);
 exponent(3);
 
@@ -40,6 +41,7 @@ console.log('3 task');
 const howManyArgs = (...args) => {
    console.log(args.length);
 }
+
 howManyArgs();
 howManyArgs(1, false, 'hello');
 howManyArgs('better');
