@@ -3,17 +3,16 @@
 // console.log(twofer("Fran")) ---> "Two for me and one for Fran"
 // console.log(twofer()) ---> "Two for me and one for you"
 
-
 console.log('1 task');
 // 1 way
-((name = 'you')=> {
+((name = 'you') => {
   console.log(`Two for me and one for ${name}`);
 })();
 
 //2 way
-const twofer = (name='you') => {
+const twofer = (name = 'you') => {
   console.log(`Two for me and one for ${name}`);
-}
+};
 
 twofer('Fran');
 twofer();
@@ -26,9 +25,9 @@ twofer();
 console.log('2 task');
 const exponent = (base, exp = 2) => {
   console.log(Math.pow(base, exp));
-}
+};
 
-exponent(3,3);
+exponent(3, 3);
 exponent(3);
 
 // Write a function that it returns the total amount of arguments passed to it.
@@ -39,8 +38,8 @@ exponent(3);
 
 console.log('3 task');
 const howManyArgs = (...args) => {
-   console.log(args.length);
-}
+  console.log(args.length);
+};
 
 howManyArgs();
 howManyArgs(1, false, 'hello');
@@ -63,7 +62,7 @@ console.log('4 task Sum');
 const sum = (...args) => {
   const sum = args.reduce((acc, cur) => acc + cur, 0);
   console.log(sum);
-}
+};
 
 sum(1);
 sum(1, 15);
@@ -72,10 +71,67 @@ sum(25, 25, 20);
 console.log('4 task average');
 const average = (...args) => {
   const average = args.reduce((acc, cur) => acc + cur, 0);
-  console.log(average/args.length);
-}
+  console.log(average / args.length);
+};
 
 average(0);
 average(1, 2);
 average(1, 3, 6, 10);
 average(12, 14, 16);
+
+// c4n y0u r34d th15? Create a function that takes a string as an argument
+// and returns a coded (h4ck3r 5p34k) version of the string.
+// NB: for your program to work properly, the function should replace
+// all 'a's with 4, 'e's with 3, 'i's with 1, 'o's with 0, and 's's with 5.
+// Examples:
+// hackerSpeak("javascript is cool") ➞ "j4v45cr1pt 15 c00l"
+// hackerSpeak("programming is fun") ➞ "pr0gr4mm1ng 15 fun"
+// hackerSpeak("become a coder") ➞ "b3c0m3 4 c0d3r"
+
+const hackerSpeak = str => {
+  const arr = str.split('');
+  return arr.map(el => {
+      switch (el) {
+        case 'a' :
+          return '4'
+        case 'e' :
+          return '3'
+        case 'i' :
+          return '1'
+        case 'o' :
+          return '0'
+        case 's' :
+          return '5'
+        default: return el
+      }
+  }).join('');
+};
+
+console.log(hackerSpeak('java script is fun'));
+
+// Odds and Evens.
+// Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
+// [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
+// [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+
+const OddsAndEven = arr => {
+  return arr.map(el => {
+    return el % 2 === 0 ? el - 1 : el + 1;
+  });
+};
+
+console.log(OddsAndEven([3, 5, 2, 4]));
+console.log(OddsAndEven([6, 9, 10, 20]));
+
+// how many chr in a str(not case sens)
+// howManyStr(“I like pizza”,“p”) -> 1
+
+const howManyStr = (str, char) => {
+  arr = str.toLowerCase().split('');
+  return arr.reduce((acc, cur) => {
+    cur === char ? acc += 1 : 0;
+    return acc;
+  }, 0);
+};
+
+console.log(howManyStr('I like pizza', 'i'));
