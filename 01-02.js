@@ -12,12 +12,8 @@
 //   she saves the 5% of it. How much money will she have saved until she retires?
 //   Output: $30000
 
-((curAge, retAge, wage, spare, ) => {
-  if (curAge >= 65) {
-    console.log(`You’re already retired!`);
-  } else {
-    console.log(`$${(retAge - curAge) * 12 * wage * spare / 100}`);
-  }
-
+((curAge, retAge, wage, spare ) => {
+  const result = curAge >= 65 ? `You’re already retired!` : `$${(retAge - curAge) * 12 * wage * spare / 100}`;
+  console.log(result);
 })(40, 65,2000, 5);
 
