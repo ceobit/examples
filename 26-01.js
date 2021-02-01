@@ -102,7 +102,8 @@ const hackerSpeak = str => {
           return '0'
         case 's' :
           return '5'
-        default: return el
+        default:
+          return el
       }
   }).join('');
 };
@@ -114,14 +115,21 @@ console.log(hackerSpeak('java script is fun'));
 // [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
 // [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
 
-const OddsAndEven = arr => {
+// const OddsAndEven = arr => {
+//   return arr.map(el => {
+//     return el % 2 === 0 ? el - 1 : el + 1;
+//   });
+// };
+
+const OddsAndEven = (...arr) => {
+  // console.log(arr);
   return arr.map(el => {
     return el % 2 === 0 ? el - 1 : el + 1;
   });
 };
 
-console.log(OddsAndEven([3, 5, 2, 4]));
-console.log(OddsAndEven([6, 9, 10, 20]));
+console.log(OddsAndEven(3, 5, 2, 4));
+console.log(OddsAndEven(6, 9, 10, 20));
 
 // how many chr in a str(not case sens)
 // howManyStr(“I like pizza”,“p”) -> 1

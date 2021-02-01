@@ -47,5 +47,43 @@ const monthCheck = (str) => {
     ? `We couldn’t find any month in your text, sorry try again`
     : `You have entered ${month}, which is in ${currentSe(month)}`;
 };
-console.log(monthCheck("I love April"));
-console.log(monthCheck("We need Kartoffel"));
+// console.log(monthCheck("I love April"));
+// console.log(monthCheck("We need Kartoffel"));
+
+const monthCheck1 = (str) => {
+  let months = [
+    "december",
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+  ];
+  let seasons = ["Winter", "Spring", "Summer", "Autumn"];
+
+  const currentSe = (monthName) => {
+    return seasons[Math.floor(months.indexOf(monthName)/3)];
+  };
+
+  let month = str
+  .toLowerCase()
+  .split(" ")
+  .filter((word) => months.includes(word))
+  .join("");
+  return month === ""
+    ? `We couldn’t find any month in your text, sorry try again`
+    : `You have entered ${month}, which is in ${currentSe(month)}`;
+};
+console.log(monthCheck1("I love April"));
+console.log(monthCheck1("I love june"));
+console.log(monthCheck1("I love may"));
+console.log(monthCheck1("I love september"));
+console.log(monthCheck1("I love november"));
+console.log(monthCheck1("I love december"));
+console.log(monthCheck1("We need Kartoffel"));
