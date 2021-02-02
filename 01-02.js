@@ -47,8 +47,13 @@ const monthCheck = (str) => {
     ? `We couldn’t find any month in your text, sorry try again`
     : `You have entered ${month}, which is in ${currentSe(month)}`;
 };
-// console.log(monthCheck("I love April"));
-// console.log(monthCheck("We need Kartoffel"));
+console.log(monthCheck("I love April"));
+console.log(monthCheck("I love june"));
+console.log(monthCheck("I love may"));
+console.log(monthCheck("I love september"));
+console.log(monthCheck("I love november"));
+console.log(monthCheck("I love december"));
+console.log(monthCheck("We need Kartoffel"));
 
 const monthCheck1 = (str) => {
   let months = [
@@ -80,10 +85,10 @@ const monthCheck1 = (str) => {
     ? `We couldn’t find any month in your text, sorry try again`
     : `You have entered ${month}, which is in ${currentSe(month)}`;
 };
-console.log(monthCheck1("I love April"));
-console.log(monthCheck1("I love june"));
-console.log(monthCheck1("I love may"));
-console.log(monthCheck1("I love september"));
-console.log(monthCheck1("I love november"));
-console.log(monthCheck1("I love december"));
-console.log(monthCheck1("We need Kartoffel"));
+// console.log(monthCheck1("I love April"));
+// console.log(monthCheck1("I love june"));
+// console.log(monthCheck1("I love may"));
+// console.log(monthCheck1("I love september"));
+// console.log(monthCheck1("I love november"));
+// console.log(monthCheck1("I love december"));
+// console.log(monthCheck1("We need Kartoffel"));

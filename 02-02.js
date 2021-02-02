@@ -15,7 +15,7 @@ for (const [key, value] of Object.entries(person2)) {
 
 // Create a function that returns an array of the properties of a javascript object.
 const objProp = person2 => {
-  return [key, value] = Object.entries(person2);
+  return Object.entries(person2);
 };
 
 console.log(objProp(person2));
@@ -25,8 +25,7 @@ console.log(objProp(person2));
 //   firstName: "Zain",
 //   lastName: "Oil",
 //   class: 48 };
-// Create a method that prints the following:
-//   "Zain Oil a student in class 48"
+// Create a method that prints the following: "Zain Oil a student in class 48"
 
 const student = {
   firstName: 'Zain',
@@ -75,10 +74,10 @@ console.log(getObjectValues(objChoice));
 const studentNew = {
   name: 'Mike',
   class: '4A',
-  course: 'English'
-}
+  course: 'English',
+};
 
-const getObjectKeys= obj => {
+const getObjectKeys = obj => {
   return Object.keys(obj);
 };
 
