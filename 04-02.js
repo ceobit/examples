@@ -12,17 +12,12 @@ const countOfLetters1 = str => {
  const arr =  str.split('');
  const result = {};
  for (let i = 0; i < arr.length; i++) {
-   if (result.hasOwnProperty(arr[i])) {
-     result[arr[i]] = result[arr[i]] + 1;
-   } else
-   {
-     result[arr[i]] = 1;
-   }
+   result.hasOwnProperty(arr[i]) ? result[arr[i]] += 1 : result[arr[i]] = 1;
  }
  return result;
 }
 
-console.log(countOfLetters('ABC'));
+console.log(countOfLetters1('ABCC'));
 console.log(countOfLetters('QQQ'));
 
 
