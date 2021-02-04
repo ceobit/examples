@@ -22,8 +22,8 @@ const countOfLetters1 = str => {
  return result;
 }
 
-console.log(countOfLetters1('ABC'));
-console.log(countOfLetters1('QQQ'));
+console.log(countOfLetters('ABC'));
+console.log(countOfLetters('QQQ'));
 
 
 // // Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
@@ -97,19 +97,16 @@ const zodiac = [
 
 const getZodiac = date => {
 
-  const reverseDate = date => new Date(`${date.slice(-4)}-${date.slice(3,5)}-${date.slice(0,2)}`);
+ const reverseDate = date => new Date(`${date.slice(-4)}-${date.slice(3,5)}-${date.slice(0,2)}`);
   const year = date.slice(-4);
 
-  const resultArr =  zodiac.filter(el => {
+  for (let el of zodiac) {
     if (reverseDate(`${el.start}-${year}`) < reverseDate(date) && reverseDate(`${el.end}-${year}`) >= reverseDate(date)) {
       return el.name;
     }
-  })
-
-  return resultArr[0].name;
+  }
+  return '';
 }
 
 console.log(getZodiac('10-06-1984'));
 console.log(getZodiac('30-10-1990'));
-
-
