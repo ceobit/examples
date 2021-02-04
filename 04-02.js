@@ -97,7 +97,7 @@ const zodiac = [
 
 const getZodiac = date => {
 
- const reverseDate = date => new Date(`${date.slice(-4)}-${date.slice(3,5)}-${date.slice(0,2)}`);
+ const reverseDate = date => new Date(date.split('-').reverse().join('-'))
   const year = date.slice(-4);
 
   for (let el of zodiac) {
@@ -105,7 +105,6 @@ const getZodiac = date => {
       return el.name;
     }
   }
-  return '';
 }
 
 console.log(getZodiac('10-06-1984'));
