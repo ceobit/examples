@@ -15,7 +15,8 @@ for (const [key, value] of Object.entries(person2)) {
 
 // Create a function that returns an array of the properties of a javascript object.
 const objProp = person2 => {
-  return Object.entries(person2);
+  return Object.entries(person2); // 1 way
+  // return [[...Object.keys(person2)], [...Object.values(person2)]]; //2 way
 };
 
 console.log(objProp(person2));
@@ -77,10 +78,19 @@ const studentNew = {
   course: 'English',
 };
 
+c = 0;
+console.log(c);
+
+
 const getObjectKeys = obj => {
+
   return Object.keys(obj);
 };
 
-console.log(getObjectKeys(studentNew));
+var c;
+console.log(c);
+
+
+//console.log(getObjectKeys(studentNew));
 
 

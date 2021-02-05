@@ -12,7 +12,7 @@ const countOfLetters1 = str => {
  const arr =  str.split('');
  const result = {};
  for (let i = 0; i < arr.length; i++) {
-   result.hasOwnProperty(arr[i]) ? result[arr[i]] += 1 : result[arr[i]] = 1;
+   result[arr[i]] ? result[arr[i]] += 1 : result[arr[i]] = 1;
  }
  return result;
 }
@@ -28,79 +28,43 @@ console.log(countOfLetters('QQQ'));
 // // zodiac(“10-06-1984")  -> Gemini
 
 const zodiac = [
-  {
-    name: 'Aries',
-    start: '21-03',
-    end: '20-04'
-  },
-  {
-    name: 'Taurus',
-    start: '20-04',
-    end: '21-05'
-  },
-  {
-    name: 'Gemini',
-    start: '21-05',
-    end: '21-06'
-  },
-  {
-    name: 'Cancer',
-    start: '21-06',
-    end: '23-07'
-  },
-  {
-    name: 'Leo',
-    start: '23-07',
-    end: '23-08'
-  },
-  {
-    name: 'Virgo',
-    start: '23-08',
-    end: '23-09'
-  },
-  {
-    name: 'Libra',
-    start: '23-09',
-    end: '23-10'
-  },
-  {
-    name: 'Scorpio',
-    start: '23-10',
-    end: '22-11'
-  },
-  {
-    name: 'Sagittarius',
-    start: '23-11',
-    end: '22-12'
-  },
-  {
-    name: 'Capricorn',
-    start: '22-12',
-    end: '20-01'
-  },
-  {
-    name: 'Aquarius',
-    start: '20-01',
-    end: '19-02'
-  },
-  {
-    name: 'Pisces',
-    start: '19-02',
-    end: '21-03'
-  },
+  { signName: "Not real day!", from: "0000" },
+  { signName: "Capricorn", from: "0101" },
+  { signName: "Aquarius", from: "0121" },
+  { signName: "Pisces", from: "0220" },
+  { signName: "Aries", from: "0321" },
+  { signName: "Taurus", from: "0421" },
+  { signName: "Gemini", from: "0521" },
+  { signName: "Cancer", from: "0622" },
+  { signName: "Leo", from: "0723" },
+  { signName: "Virgo", from: "0824" },
+  { signName: "Libra", from: "0924" },
+  { signName: "Scorpio", from: "1024" },
+  { signName: "Sagittarius", from: "1123" },
+  { signName: "Capricorn", from: "1222" },
+  { signName: "Not real day!", from: "1232" },
+  { signName: "empty", from: "0000" },
 ];
 
 const getZodiac = date => {
 
- const reverseDate = date => new Date(date.split('-').reverse().join('-'))
-  const year = date.slice(-4);
+  const partOfDate = date.slice(0,5).split('-').reverse().join('');
 
-  for (let el of zodiac) {
-    if (reverseDate(`${el.start}-${year}`) < reverseDate(date) && reverseDate(`${el.end}-${year}`) >= reverseDate(date)) {
-      return el.name;
-    }
-  }
+  // const newArr = zodiac.filter((el,i) => {
+  //   if (i < zodiac.length) {
+  //   }
+  // });
+
+
+  // for (let i = 0; i < zodiac.length - 1; i++) {
+  //   if (zodiac[i].from < partOfDate && zodiac[i+1].from > partOfDate) {
+  //     return zodiac[i].signName;
+  //   }
+  // }
+
 }
 
-console.log(getZodiac('10-06-1984'));
-console.log(getZodiac('30-10-1990'));
+//{ signName: "Capricorn", from: "0101" },
+
+console.log(getZodiac('14-02-1984'));
+console.log(getZodiac('10-30-1990'));
