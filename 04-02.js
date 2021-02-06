@@ -54,8 +54,7 @@ const getZodiac = date => {
 
   const reverseDate = date.slice(0, 5).split('-').reverse().join('');
 
-  const newArr = zodiac.filter(el => el.from < reverseDate).
-    sort((a, b) => a.from - b.from);
+  const newArr = zodiac.filter(el => el.from < reverseDate).sort((a, b) => a.from - b.from);
 
   return newArr[newArr.length - 1].signName;
 
