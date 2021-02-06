@@ -64,4 +64,7 @@ const getZodiac = date => {
 console.log(getZodiac('30-10-1990'));
 console.log(getZodiac('14-02-2002'));
 console.log(getZodiac('10-06-1984'));
+console.log(getZodiac('14-08-1987'));
+console.log(getZodiac('22-11-1991'));
+console.log(getZodiac('13-12-1968'));
 console.log(getZodiac('32-12-1984'));
