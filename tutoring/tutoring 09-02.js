@@ -78,3 +78,58 @@ for (let i = 0; i <= names.length; i++) {
   result = [].concat(...Object.values(obj1)).includes(names[i]) ? names[i] : 'OTHER NAME';
   console.log(result)
 }
+
+
+//  **Seasons** Create a function that accepts a text from user and check if the user has entered a month name, if so print out that month and in which season it is.
+// // I will be nice again to you and offer the arrays :wink:
+const months = [
+  "december",
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "jun",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+];
+
+
+// SPECIAL FOR ANGELOS
+
+//   const seasons = ["Winter", "Spring", "Summer", "Autumn"];
+// Examples :
+// > monthCheck("I love Jun"); -> Jun is in Summer
+// > monthCheck("We need Kartoffel"); -> I couldn’t find any month in your text, sorry try again
+const monthCheck = stringi => {
+
+  const newStringi = stringi
+  .toLowerCase()
+  .split(" ")
+  .filter((month) => months.includes(month))
+  .join();
+
+  const seasonsObj = {
+    spring: ["march", "april", "may"],
+    summer: ["jun", "july", "august"],
+    autumn: ["september", "october", "november"],
+    winter: ["december", "january", "february"],
+  };
+
+  for (let [key, value] of Object.entries(seasonsObj)) {
+     if (value.includes(newStringi)) {
+       return key;
+     }
+  }
+  return 'Not found'
+};
+console.log(monthCheck("I love Jun"));
+console.log(monthCheck("I hate february"));
+console.log(monthCheck("I hate november"));
+console.log(monthCheck("I hate april"));
+console.log(monthCheck("I hate October"));
+console.log(monthCheck("I hate february"));
+console.log(monthCheck("We need Kartoffel"));
