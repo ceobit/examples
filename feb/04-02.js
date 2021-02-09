@@ -54,7 +54,8 @@ const getZodiac = date => {
 
   const reverseDate = date.slice(0, 5).split('-').reverse().join('');
 
-  const newArr = zodiac.filter(el => el.from < reverseDate).sort((a, b) => a.from - b.from);
+  const newArr = zodiac.filter(el => el.from < reverseDate).
+    sort((a, b) => a.from - b.from);
 
   return newArr[newArr.length - 1].signName;
 
@@ -67,3 +68,17 @@ console.log(getZodiac('14-08-1987'));
 console.log(getZodiac('22-11-1991'));
 console.log(getZodiac('13-12-1968'));
 console.log(getZodiac('32-12-1984'));
+
+const obj =
+  {
+    userName: 'Roman',
+    age: 30
+  }
+;
+
+const {userName} = obj;
+console.log(userName);
+
+for (let [key, value] of Object.entries(obj)) {
+  console.log(key, value);
+}
