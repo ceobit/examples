@@ -121,5 +121,3 @@ console.log(objObj);
 // objObj.color[0] = 'yellow';
 //
 // console.log(car);
-
-
