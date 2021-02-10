@@ -2,4 +2,6 @@
 
 different examples during DCI Web development course
 
-[scope, closure, IIFE](https://github.com/ceobit/examples/blob/main/tutoring%2001-02.js)
+* [Scope, closure, IIFE](https://github.com/ceobit/examples/blob/main/tutoring/tutoring%2001-02.js)  
+* [Recursion, objects](https://github.com/ceobit/examples/blob/main/feb/10-02.js)
+* [Zodiac assignment](https://github.com/ceobit/examples/blob/main/feb/04-02.js)

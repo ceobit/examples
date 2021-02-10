@@ -56,7 +56,7 @@ console.log(copyObj(person));
 
 const obj =  { a: 1, b: 2, c: 3 }
 const keyValues = obj => {
-  return [].concat([Object.keys(obj)],[Object.values(obj)]);
+  return [Object.keys(obj),Object.values(obj)];
 }
 
 console.log(keyValues(obj));
@@ -121,3 +121,5 @@ console.log(objObj);
 // objObj.color[0] = 'yellow';
 //
 // console.log(car);
+
+
