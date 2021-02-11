@@ -59,6 +59,7 @@ class Tv {
   }
   rest() {
     this.volume = 10;
+    this.channel = 1;
   }
 }
 
