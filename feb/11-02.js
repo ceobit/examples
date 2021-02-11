@@ -51,11 +51,11 @@ class Tv {
     this.channel = _channel;
     this.volume = _volume;
   }
-  incVolume(volume) {
-    this.volume += volume;
+  incVolume() {
+    this.volume++;
   }
-  decVolume(volume) {
-    volume > this.volume ? console.log(`volume should be less than ${this.volume}`) : this.volume -= volume;
+  decVolume() {
+    this.volume--;
   }
   rest() {
     this.volume = 10;
@@ -64,6 +64,6 @@ class Tv {
 }
 
 const lg = new Tv('LG', 400, 50);
-lg.incVolume(230);
-lg.decVolume(500);
+lg.incVolume();
+lg.decVolume();
 lg.rest();
