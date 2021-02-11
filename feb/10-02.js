@@ -121,3 +121,13 @@ console.log(objObj);
 // objObj.color[0] = 'yellow';
 //
 // console.log(car);
+
+const arr1 = [7, 1, 5, 2, 3, 6];
+const arr2 = [3, 8, 6, 20, 7];
+const rr = arr1.filter(entryA1 => arr2.find(entryA2 => entryA2 === entryA1) !== undefined)
+
+console.log(rr);
+
+const result =  arr1.filter(el => arr2.includes(el));
+
+console.log(result);
