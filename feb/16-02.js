@@ -1,95 +1,35 @@
+
 // 1 way
-const monthCheck = (str) => {
-  let months = [
-    'december',
-    'january',
-    'february',
-    'march',
-    'april',
-    'may',
-    'june',
-    'july',
-    'august',
-    'september',
-    'october',
-    'november',
-  ];
-  let seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
+const createGrid = (size, char) => {
+  const resultArr = [];
+  let auxArr = [];
+  for (let i = 0; i < size; i++) {
+    auxArr = [];
+    for (let j = 0; j < size; j++) {
+      auxArr.push(char);
+    }
+    resultArr.push(auxArr);
+  }
+  return resultArr;
+}
 
-  const currentSe = (monthName) => {
-    return seasons[Math.floor(months.indexOf(monthName) / 3)];
-  };
+console.log(createGrid(3, '*'));
 
-  let month = str.toLowerCase().
-    split(' ').
-    filter((word) => months.includes(word)).
-    join('');
-  return month === ''
-    ? `We couldn’t find any month in your text, sorry try again`
-    : `You have entered ${month}, which is in ${currentSe(month)}`;
-};
-console.log(monthCheck('I love April'));
-console.log(monthCheck('I love june'));
-console.log(monthCheck('I love may'));
-console.log(monthCheck('I love september'));
-console.log(monthCheck('I love november'));
-console.log(monthCheck('I love december'));
-console.log(monthCheck('We need Kartoffel'));
+// 2 way
+const createGrid1 = (size, char) => {
+  const resultArr = [];
+  Array(size).fill(char).forEach(el => resultArr.push(Array(size).fill(char)));
+  return resultArr;
+}
 
-//2 way Object
-const seasons = {
-  'Winter': ['december', 'january', 'february'],
-  'Spring': ['march', 'april', 'may'],
-  'Summer': ['june', 'july', 'august'],
-  'Autumn': ['september', 'october', 'november'],
-};
-
-const monthCheck1 = (str) => {
-
-  const months = [].concat(...Object.values(seasons));
-
-  let month = str.toLowerCase().
-    split(' ').
-    filter((word) => months.includes(word)).
-    join('');
-
-  const [value] = [
-    ...Object.values(seasons).
-      filter(value => value.includes(month))];
-  return Object.keys(seasons).find(key => seasons[key] === value);
-};
-
-console.log(monthCheck1('I love june'));
+console.log(createGrid1(3, '*'));
 
 // 3 way
-const monthCheck2 = (str) => {
+const createGrid2 = (size, char) => {
+  const resultArr = [];
+  char.repeat(size).split('').forEach(el => resultArr.push(char.repeat(size).split('')));
+  return resultArr;
+}
 
-  let months = [
-    'december',
-    'january',
-    'february',
-    'march',
-    'april',
-    'may',
-    'june',
-    'july',
-    'august',
-    'september',
-    'october',
-    'november',
-  ];
-  let seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
+console.log(createGrid2(3, '*'));
 
-  let month = str.toLowerCase().
-    split(' ').
-    filter((word) => months.includes(word)).
-    join('');
-
-  if (months.indexOf(month) < 3) return seasons[0];
-  else if (months.indexOf(month) >= 3 && months.indexOf(month) < 6) return seasons[1];
-  else if (months.indexOf(month) >= 6 && months.indexOf(month) < 9) return seasons[2];
-  else return seasons[3];
-
-};
-
-console.log(monthCheck2('I love june'));
