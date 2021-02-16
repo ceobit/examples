@@ -93,3 +93,10 @@ console.log(vowelCount1('hEllo'));
 
 const numArray = [17, 98, 5, 0, 678, 43, 55, 44, 34]
 console.log(numArray.sort((a, b) => a - b));
+
+const numbers = [1, 4, 9, 16];
+function subtractTwo() {
+  return numbers.map((el) => el - 2);
+}
+
+console.log(subtractTwo());
