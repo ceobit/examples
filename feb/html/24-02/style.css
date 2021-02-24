@@ -1,0 +1,45 @@
+@import "../fonts/fonts.css";
+
+.title {
+    font-family: Roboto, serif;
+    font-weight: 900;
+}
+
+.shapes {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.triangle {
+    border: 2rem solid transparent;
+    border-left: 2rem solid slateblue;
+    border-bottom: 2rem solid slateblue;
+}
+
+/*.triangle::after {*/
+/*    content: '';*/
+/*    border: 1px solid black;*/
+/*}*/
+
+.rectangle {
+    background-color: cadetblue;
+    width: 5rem;
+    height: 10rem;
+    border: 1px solid black;
+}
+
+.square {
+    background-color: green;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
+}
+
+.circle {
+    background-color: navajowhite;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
