@@ -75,12 +75,9 @@ let menuList = document.getElementById('menu');
 console.log(menuList.firstElementChild);
 console.log(menuList.lastElementChild);
 
-
-
 // all comments in your html page should be printed in console
 console.log('////////////////');
-const body = document.querySelector('body').childNodes;
-const comments = [];
-body.forEach(el => el.nodeType === 8 ? comments.push(el) : null);
+let elements = document.querySelectorAll('*');
 
-comments.forEach(el => console.log(el.textContent));
+elements.forEach(el => el.childNodes.forEach(
+  node => node.nodeType === 8 ? console.log(node) : null));
