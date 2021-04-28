@@ -1,0 +1,22 @@
+@media all and (max-width: 480px){
+  .title {
+    font-size: 42px;
+  }
+
+  .card {
+    width: 100%!important;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-range {
+    width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+  }
+}

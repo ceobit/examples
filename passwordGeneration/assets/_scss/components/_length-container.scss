@@ -2,6 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+@media all and (max-width: 480px){
+  .length-container {
+    flex-direction: column;
+  }
 }
