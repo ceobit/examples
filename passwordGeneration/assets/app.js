@@ -1,15 +1,29 @@
 import './_scss/styles.scss';
 
-const passGenerator = () => {
-  let password = '';
-  const length = 30;
+
+const range = document.querySelector('.form-range');
+const rangeValue = document.querySelector('.range-value');
+const btn = document.querySelector('.btn');
+const password = document.querySelector('.password');
+
+
+const passGenerator = (e, length) => {
+  let pass = '';
   const charSet =
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,@#!?$';
 
   for (let i = 0; i < length; i++) {
-    password += charSet.charAt(Math.floor(Math.random() * charSet.length));
+    pass += charSet.charAt(Math.floor(Math.random() * charSet.length));
   }
-  console.log(`This is your randomly generated password: ${password}`);
+
+  password.textContent = pass;
+
 };
 
-passGenerator();
+const changeLength = e => {
+  rangeValue.textContent = e.target.value;
+}
+
+
+range.addEventListener('mousemove', changeLength);
+btn.addEventListener('click', e => passGenerator(e,rangeValue.textContent));

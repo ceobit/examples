@@ -14,8 +14,18 @@
         <div class="password"></div>
         <div class="card-body">
             <h5 class="card-title">Choose options</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+            <div class="length-container">
+                <label for="range" class="form-label">Password length</label>
+                <input type="range" class="form-range" min="6" max="30" step="1" id="range">
+                <div class="range-value">18</div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    High complexity
+                </label>
+            </div>
+
             <a href="#" class="btn btn-primary">Create</a>
         </div>
     </div>
