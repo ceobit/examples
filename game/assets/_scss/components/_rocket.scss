@@ -1,0 +1,9 @@
+.rocket {
+  display: none;
+  width: 5vw;
+  margin-left: 33%;
+
+  &_show {
+    display: block;
+  }
+}

@@ -1,6 +1,7 @@
 import './_scss/styles.scss';
 
-const spaceShip = document.querySelector('.space-ship');
+const spaceShip = document.querySelector('.space-ship_container');
+const rocket = document.querySelector('.rocket');
 const body = document.querySelector("body");
 let currentPos = spaceShip.offsetLeft;
 
@@ -32,7 +33,8 @@ const moveSpaceShip = e => {
 
 const shoot = e => {
   if (e.code === 'Space') {
-    
+    rocket.classList.add('rocket_show');
+
   }
 };
 
