@@ -2,24 +2,40 @@ import './_scss/styles.scss';
 
 const spaceShip = document.querySelector('.space-ship');
 const body = document.querySelector("body");
+let currentPos = spaceShip.offsetLeft;
 
 
+// move the ship TODO: limit the borders
+const spaceShipActions = e => {
+
+  moveSpaceShip(e);
+  shoot(e);
+
+};
+
+
+//ACTIONS
 const moveSpaceShip = e => {
-  const currentPos = spaceShip.offsetLeft;
-
-  console.log('11111');
-
   switch (e.code) {
     case 'KeyA': //left
-      spaceShip.style.marginLeft = (currentPos - 5) + 'px';
+      currentPos -=30;
+      spaceShip.style.marginLeft = currentPos + 'px';
       break;
     case 'KeyD': //right
-      spaceShip.style.marginLef = (currentPos + 5) + 'px';
+      currentPos += 30;
+      spaceShip.style.marginLeft = currentPos + 'px';
       break;
     default:
       console.log('press other key');
   }
-
 };
 
-body.addEventListener('keypress', moveSpaceShip);
+const shoot = e => {
+  if (e.code === 'Space') {
+    
+  }
+};
+
+body.addEventListener('keypress', spaceShipActions);
+
+
