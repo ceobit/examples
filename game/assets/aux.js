@@ -1,4 +1,4 @@
-export const isScrolledIntoView = el => {
+export const isIntoView = el => {
   const rect = el.getBoundingClientRect();
   const elemTop = rect.top;
   const elemBottom = rect.bottom;

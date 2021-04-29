@@ -1,12 +1,11 @@
 import './_scss/styles.scss';
+import {isIntoView} from './aux';
 
 const spaceShip = document.querySelector('.space-ship_container');
-const rocket = document.querySelector('.rocket');
-const body = document.querySelector("body");
+const ship = document.querySelector('.space-ship');
+const body = document.querySelector('body');
 
 let currentSpaceShipPos = spaceShip.offsetLeft;
-let currentRocketPos = rocket.offsetTop;
-
 
 // move the ship TODO: limit the borders
 const spaceShipActions = e => {
@@ -16,12 +15,11 @@ const spaceShipActions = e => {
 
 };
 
-
 //ACTIONS
 const moveSpaceShip = e => {
   switch (e.code) {
     case 'KeyA': //left
-      currentSpaceShipPos -=30;
+      currentSpaceShipPos -= 30;
       spaceShip.style.marginLeft = currentSpaceShipPos + 'px';
       break;
     case 'KeyD': //right
@@ -34,21 +32,32 @@ const moveSpaceShip = e => {
 };
 
 const shoot = e => {
-  let movement;
+
   if (e.code === 'Space') {
+    const rocket = createRocket();
     rocket.classList.add('rocket_show');
-    movement = setInterval(moveRocket, 50);
+    let currentRocketPos = rocket.offsetTop;
+    setInterval(moveRocket.bind(this, rocket, currentRocketPos), 50);
   }
 
-  if (e.code === 'KeyQ') {
-    console.log('clear');
-    clearInterval(movement);
-  }
 };
 
-const moveRocket = () => {
-  currentRocketPos +=30;
+const createRocket = () => {
+  const rocket = document.createElement('img');
+  rocket.src = '/images/rocket.png';
+  rocket.classList.add('rocket');
+  spaceShip.insertBefore(rocket, ship);
+
+  return rocket;
+};
+
+const moveRocket = (rocket, currentRocketPos) => {
+  currentRocketPos += 30;
   rocket.style.marginBottom = currentRocketPos + 'px';
+
+  if (!isIntoView(rocket)) {
+    rocket.remove();
+  }
 };
 
 body.addEventListener('keypress', spaceShipActions);
