@@ -1,5 +1,6 @@
 import './_scss/styles.scss';
 import {isIntoView} from './aux';
+import {start} from './enemies';
 
 const spaceShip = document.querySelector('.space-ship_container');
 const ship = document.querySelector('.space-ship');
@@ -9,10 +10,8 @@ let currentSpaceShipPos = spaceShip.offsetLeft;
 
 // move the ship TODO: limit the borders
 const spaceShipActions = e => {
-
   moveSpaceShip(e);
   shoot(e);
-
 };
 
 //ACTIONS
@@ -37,7 +36,7 @@ const shoot = e => {
     const rocket = createRocket();
     rocket.classList.add('rocket_show');
     let currentRocketPos = rocket.offsetTop;
-    setInterval(moveRocket.bind(this, rocket, currentRocketPos), 50);
+    setInterval(moveRocket.bind(this, rocket, currentRocketPos), 100);
   }
 
 };
@@ -59,6 +58,7 @@ const moveRocket = (rocket, currentRocketPos) => {
     rocket.remove();
   }
 };
+
 
 body.addEventListener('keypress', spaceShipActions);
 

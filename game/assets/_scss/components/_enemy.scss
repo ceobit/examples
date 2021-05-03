@@ -1,0 +1,15 @@
+.enemy {
+  height: 10vh;
+  position: absolute;
+  //top: 0;
+  left: 0;
+
+  &_fireball {
+    transform: rotate(-50deg);
+  }
+
+  &_death-star {
+    height: 30vh;
+  }
+}
+

@@ -5,3 +5,8 @@ export const isIntoView = el => {
 
   return (elemTop >= 0) && (elemBottom <= window.innerHeight);
 }
+
+export const randomValue = max =>
+{
+  return Math.floor(Math.random() * max);
+}
