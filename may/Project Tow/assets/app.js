@@ -53,16 +53,16 @@ const convertNumber = e => {
   let value = 0;
   switch (+select.value) {
     case 1:
-      value = ConvertBase.bin2dec(number.value);
+      value = ConvertBase.bin2dec(+number.value);
       break;
     case 2:
-      value = ConvertBase.dec2bin(number.value);
+      value = ConvertBase.dec2bin(+number.value);
       break;
     case 3:
-      value = ConvertBase.dec2hex(number.value);
+      value = ConvertBase.dec2hex(+number.value);
       break;
     case 4:
-      value = ConvertBase.hex2dec(number.value);
+      value = ConvertBase.hex2dec(+number.value);
       break;
     default:
       value = 9;
