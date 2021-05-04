@@ -1,0 +1,45 @@
+{
+  "name": "boilerplate-scss",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "assets/app.js",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack serve --mode=development",
+    "init": "netlify init",
+    "deploy": "netlify deploy --prod -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceobit/boilerplate-scss.git"
+  },
+  "keywords": [
+    "scss",
+    "template"
+  ],
+  "author": "Roman Lebedenko <ceobit90@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceobit/boilerplate-scss/issues"
+  },
+  "homepage": "https://github.com/ceobit/boilerplate-scss#readme",
+  "dependencies": {
+    "copy-webpack-plugin": "^8.1.1",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.6.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "image-webpack-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^1.4.1",
+    "node-sass": "^5.0.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

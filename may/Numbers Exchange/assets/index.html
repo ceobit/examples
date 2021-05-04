@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numbers Exchange</title>
+</head>
+<body>
+<div class="container">
+    <form class="form">
+            <select class="custom-select" required>
+                <option value="">Open this select menu</option>
+                <option value="1">binary      -> decimal</option>
+                <option value="2">decimal     -> binary</option>
+                <option value="3">decimal     -> hexadecimal</option>
+                <option value="4">hexadecimal -> decimal</option>
+            </select>
+            <div class="col-auto">
+                <label class="sr-only" for="inlineFormInput">Name</label>
+                <input type="text" class="form-control mb-2 number" id="inlineFormInput" placeholder="Number">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-success mb-2">Convert</button>
+            </div>
+    </form>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly></textarea>
+</div>
+</body>
+</html>
