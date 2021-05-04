@@ -11,3 +11,5 @@ different examples during DCI Web development course
 
 * [StarWars (a simple game)]( https://eloquent-lamarr-fa12e5.netlify.app)
 Use (A,D,Space)
+
+* [Numbers Exchange](https://hardcore-bohr-659be2.netlify.app)

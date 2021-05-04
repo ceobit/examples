@@ -3,6 +3,7 @@ import './_scss/styles.scss';
 const btn = document.querySelector('.btn');
 const select = document.querySelector('.custom-select');
 const number = document.querySelector('.number');
+const result = document.querySelector('.result');
 
 const ConvertBase = function(num) {
   return {
@@ -48,26 +49,32 @@ ConvertBase.hex2dec = function(num) {
 
 const convertNumber = e => {
   e.preventDefault();
-  
-  let result = 0;
-  switch (select.value) {
+
+  let value = 0;
+  switch (+select.value) {
     case 1:
-      result = ConvertBase.bin2dec(number);
+      value = ConvertBase.bin2dec(+number.value);
       break;
     case 2:
-      result = ConvertBase.dec2bin(number);
+      value = ConvertBase.dec2bin(+number.value);
       break;
     case 3:
-      result = ConvertBase.dec2hex(number);
+      value = ConvertBase.dec2hex(+number.value);
       break;
     case 4:
-      result = ConvertBase.hex2dec(number);
+      value = ConvertBase.hex2dec(+number.value);
       break;
     default:
-      result = 0;
+      value = 9;
   }
-
+  result.value = value;
 
 };
 
-btn.addEventListener('submit', convertNumber);
+const resetAll = () => {
+  result.value = '';
+  number.value = '';
+};
+
+btn.addEventListener('click', convertNumber);
+// select.addEventListener('click', resetAll);
