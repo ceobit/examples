@@ -21,13 +21,12 @@ const firstObj = print.bind(obj);
 const secondObj = print.bind(obj2);
 const thirdObj = print.bind(obj3);
 
-thirdObj
 
 firstObj();
 secondObj();
 thirdObj();
 
-console.log('/////');thirdObj
+console.log('/////');
 
 // print.apply(obj, ['Anna', 'Eva', 'Sofia']);
 
