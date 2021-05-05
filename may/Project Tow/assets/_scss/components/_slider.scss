@@ -1,12 +1,9 @@
 input#slider {
-  background: transparent;
   cursor: col-resize;
   height: 100%;
   width: 100%;
   left: 0;
   top: -100%;
-  margin: 0;
-  outline: none;
-  padding: 0;
   position: relative;
+  opacity: 0;
 }
