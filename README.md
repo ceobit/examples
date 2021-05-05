@@ -13,3 +13,5 @@ different examples during DCI Web development course
 Use (A,D,Space)
 
 * [Numbers Exchange](https://hardcore-bohr-659be2.netlify.app)
+
+* [Slider](https://vibrant-knuth-c2d48c.netlify.app)
