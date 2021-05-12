@@ -1,3 +1,5 @@
+import './_scss/styles.scss';
+
 // HTML Elements
 const statusDiv = document.querySelector('.status');
 const resetDiv = document.querySelector('.reset');
@@ -54,14 +56,14 @@ const checkGameStatus = () => {
     }
   }
 
- if (gameIsLive) {
-   xIsNext = !xIsNext;
-   if (xIsNext) {
-     statusDiv.innerHTML = `${xSymbol} is next`;
-   } else {
-     statusDiv.innerHTML = `<span>${oSymbol} is next</span>`;
-   }
- }
+  if (gameIsLive) {
+    xIsNext = !xIsNext;
+    if (xIsNext) {
+      statusDiv.innerHTML = `${xSymbol} is next`;
+    } else {
+      statusDiv.innerHTML = `<span>${oSymbol} is next</span>`;
+    }
+  }
 };
 
 // event Handlers

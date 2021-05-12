@@ -15,3 +15,4 @@ Use (A,D,Space)
 * [Numbers Exchange](https://hardcore-bohr-659be2.netlify.app)
 
 * [Slider](https://vibrant-knuth-c2d48c.netlify.app)
+* [Tic-Tac-Toe (using Magic square)](https://vibrant-newton-b395ec.netlify.app/)
