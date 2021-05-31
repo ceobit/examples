@@ -1,0 +1,28 @@
+.monitor {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 35%;
+  margin: 0 auto;
+  background: linear-gradient(145.27deg, #2e2c2c -4.62%, #0b0a0a 64.58%);
+  color: white;
+  border-radius: 12px;
+}
+
+.expression {
+  display: flex;
+  align-items: flex-end;
+  height: 60%;
+  margin-right: 3%;
+  color: #888888;
+  font-size: 22px;
+  word-wrap: break-word;
+}
+
+.result {
+  height: 40%;
+  margin: 3%;
+  font-size: 45px;
+}
