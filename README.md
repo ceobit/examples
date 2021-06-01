@@ -16,3 +16,4 @@ Use (A,D,Space)
 
 * [Slider](https://vibrant-knuth-c2d48c.netlify.app)
 * [Tic-Tac-Toe (using Magic square)](https://vibrant-newton-b395ec.netlify.app/)
+* [Morse App](https://morseapp.netlify.app)
