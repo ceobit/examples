@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 import { Form, Formik } from "formik";
-import * as Yup from "yup";
 
 import TextArea from "../TextArea/TextArea";
 import { AppContext } from "../../context/appContext";
 import classes from "./customForm.module.css";
 import play from "../../aux/playMorse";
-import { MORSE_TABLE } from "../../constants";
 
 const CustomForm = () => {
   const [state, setState] = useContext(AppContext);
