@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../context/appContext";
 import classes from "./display.module.css";
 
 const Display = () => {

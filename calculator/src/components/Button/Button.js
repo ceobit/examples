@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../context/appContext";
 import classes from "./button.module.css";
 import initialState from "../../data/initialState";
 
@@ -22,6 +22,8 @@ const Button = ({ number, className }) => {
         ...{ ["result"]: eval(state["expression"].join("")) },
       }));
     }
+
+    console.log(eval("5-5+2*10"));
 
     // ADD NUMBERS AND SIGNS TO STATE
     if (value !== "=" && value !== "C") {
