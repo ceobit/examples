@@ -3,6 +3,8 @@ import { Form, Formik } from "formik";
 
 import TextArea from "../TextArea/TextArea";
 import { AppContext } from "../../context/appContext";
+import classes from "./customForm.module.css";
+import play from "../../aux/playMorse";
 
 const CustomForm = () => {
   const [state, setState] = useContext(AppContext);
@@ -11,14 +13,9 @@ const CustomForm = () => {
     <Formik
       initialValues={{
         text: "",
-        morse: "",
+        codedText: "",
       }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 500);
-      }}
+      onSubmit={() => play(state.codedText)}
     >
       <Form>
         <TextArea
@@ -33,6 +30,9 @@ const CustomForm = () => {
           rows="6"
           placeholder={state.codedText ? state.codedText : "Encoded text"}
         />
+        <button className={classes.btn} type="submit">
+          Play
+        </button>
       </Form>
     </Formik>
   );
