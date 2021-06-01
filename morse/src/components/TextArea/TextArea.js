@@ -26,10 +26,6 @@ const TextArea = ({ label, ...props }) => {
       ...{ text: value },
       ...{ codedText: getCodeByLetter(MORSE_TABLE, value) },
     }));
-
-    console.log("value", value);
-
-    console.log(state);
   };
 
   return (
