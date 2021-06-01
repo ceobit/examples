@@ -31,9 +31,7 @@ const CustomForm = () => {
           label="Morse text"
           name="morseText"
           rows="6"
-          placeholder={
-            state.codedText.length ? state.codedText : "Encoded text"
-          }
+          placeholder={state.codedText ? state.codedText : "Encoded text"}
         />
       </Form>
     </Formik>

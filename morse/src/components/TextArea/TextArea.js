@@ -10,7 +10,14 @@ const TextArea = ({ label, ...props }) => {
   const [state, setState] = useContext(AppContext);
 
   const getCodeByLetter = (object, value) => {
-    return Object.keys(object).find((key) => object[key] === value);
+    let codedString = "";
+    console.log("VALUE", value);
+    for (let letter of value) {
+      console.log("LETTER", letter);
+      codedString +=
+        " " + Object.keys(object).find((key) => object[key] === letter);
+    }
+    return codedString.trim();
   };
 
   const handleChange = (e) => {
@@ -18,10 +25,8 @@ const TextArea = ({ label, ...props }) => {
 
     setState((prev) => ({
       ...prev,
-      ...{ text: [...prev["text"], value] },
-      ...{
-        codedText: [...prev["codedText"], getCodeByLetter(MORSE_TABLE, value)],
-      },
+      ...{ text: value },
+      ...{ codedText: getCodeByLetter(MORSE_TABLE, value) },
     }));
   };
 
