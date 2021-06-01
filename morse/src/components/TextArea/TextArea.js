@@ -11,9 +11,7 @@ const TextArea = ({ label, ...props }) => {
 
   const getCodeByLetter = (object, value) => {
     let codedString = "";
-    console.log("VALUE", value);
     for (let letter of value) {
-      console.log("LETTER", letter);
       codedString +=
         " " + Object.keys(object).find((key) => object[key] === letter);
     }
@@ -28,9 +26,11 @@ const TextArea = ({ label, ...props }) => {
       ...{ text: value },
       ...{ codedText: getCodeByLetter(MORSE_TABLE, value) },
     }));
-  };
 
-  console.log(state);
+    console.log("value", value);
+
+    console.log(state);
+  };
 
   return (
     <>
