@@ -1,0 +1,20 @@
+.searchInput {
+  input {
+    height: 45px;
+    border: none;
+    box-shadow: 0 0 14px 9px #efefef;
+    border-radius: 6px;
+    color: gray;
+
+    background: url(../../images/search.png) no-repeat 23px;
+    padding: 10px 10px 10px 80px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #search-input {
+    input {
+      width: 100%;
+    }
+  }
+}

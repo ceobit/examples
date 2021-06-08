@@ -1,15 +1,23 @@
-import React from "react";
-import "../style/style.scss";
+import React, { useState } from "react";
+import classes from "./searchBar.module.css";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    const { value } = e.target;
+    setSearch(value);
+  };
+
   return (
     <>
-      <div className="search-input">
+      <div className={classes.searchInput}>
         <label>
           <input
             type="text"
             placeholder="Search for a country... "
-            onChange={(e) => onSearch(e.target.value)}
+            value={search}
+            onChange={handleSearch}
           />
         </label>
       </div>
