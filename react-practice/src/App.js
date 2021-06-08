@@ -16,7 +16,7 @@ function App() {
       const { data } = await res;
 
       setState({
-        countries: [...data],
+        countries: data,
         currentCountry: "",
       });
     })();

@@ -10,7 +10,7 @@ const CardList = () => {
   return (
     <div>
       {state["countries"].length > 0 &&
-        state.map(({ name, flag, population, capital }) => (
+        state["countries"].map(({ name, flag, population, capital }) => (
           <Card
             title={name}
             img={flag}
