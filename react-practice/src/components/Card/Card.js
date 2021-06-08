@@ -10,7 +10,9 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    width: "350px",
+    maxWidth: 545,
+    margin: 5,
   },
   media: {
     height: 140,
@@ -23,18 +25,14 @@ export default function MediaCard({ img, title, population, capital }) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title={title}
-        />
+        <CardMedia className={classes.media} image={img} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {`population: ${population}`}
-            {`capital: ${capital}`}
+            {`Population: ${population}`}
+            {` Capital: ${capital}`}
           </Typography>
         </CardContent>
       </CardActionArea>

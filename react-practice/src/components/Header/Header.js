@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   AppBar,
   IconButton,
@@ -10,8 +10,32 @@ import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 
 import { useStyles } from "./style";
+import axios from "axios";
+import { URL_Search } from "../../constants";
+import { AppContext } from "../../context/appContext";
 
 export default function SearchAppBar() {
+  const [search, setSearch] = useState("");
+  const [state, setState] = useContext(AppContext);
+
+  const handleSearch = (e) => {
+    console.log("1");
+    const { value } = e.target;
+    setSearch(value);
+  };
+
+  useEffect(() => {
+    (async () => {
+      const res = await axios.get(URL_Search + search);
+      const { data } = await res;
+
+      setState({
+        countries: data,
+        currentCountry: "",
+      });
+    })();
+  }, [search]);
+
   const classes = useStyles();
 
   return (
@@ -39,6 +63,8 @@ export default function SearchAppBar() {
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              value={search}
+              onChange={handleSearch}
               inputProps={{ "aria-label": "search" }}
             />
           </div>
