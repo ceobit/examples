@@ -9,11 +9,14 @@ const TextArea = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   const [state, setState] = useContext(AppContext);
 
+  console.log(field);
+
   const getCodeByLetter = (object, value) => {
     let codedString = "";
     for (let letter of value) {
       codedString +=
-        " " + Object.keys(object).find((key) => object[key] === letter);
+        " " +
+        Object.keys(object).find((key) => object[key] === letter.toLowerCase());
     }
     return codedString.trim();
   };

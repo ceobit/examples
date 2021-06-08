@@ -1,5 +1,4 @@
 const play = (codedString) => {
-  console.log("gfgf");
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const ctx = new AudioContext();
   const dot = 1.2 / 15;

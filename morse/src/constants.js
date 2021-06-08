@@ -49,6 +49,7 @@ const MORSE_TABLE = {
   ".-.-.": "+",
   "...-..-": "$",
   ".----.": "'",
+  " ": " ",
 };
 
 const initialState = {

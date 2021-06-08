@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+
+.btn {
+  width: 5vw;
+  margin: 3%;
+}
+
+.result {
+  margin: 3%;
+}
