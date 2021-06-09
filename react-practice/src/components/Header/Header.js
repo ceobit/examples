@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
+import { history } from "../../history";
 
 import { useStyles } from "./style";
 import axios from "axios";
@@ -19,7 +20,6 @@ export default function SearchAppBar() {
   const [state, setState] = useContext(AppContext);
 
   const handleSearch = (e) => {
-    console.log("1");
     const { value } = e.target;
     setSearch(value);
   };
@@ -38,6 +38,10 @@ export default function SearchAppBar() {
 
   const classes = useStyles();
 
+  const movieToMain = () => {
+    history.push(`/`);
+  };
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -47,6 +51,7 @@ export default function SearchAppBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={movieToMain}
           >
             <MenuIcon />
           </IconButton>
