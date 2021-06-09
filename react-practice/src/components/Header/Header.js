@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { history } from "../../history";
 
 import { useStyles } from "./style";
@@ -46,15 +47,17 @@ export default function SearchAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-            onClick={movieToMain}
-          >
-            <MenuIcon />
-          </IconButton>
+          {state.currentCountry ? (
+            <ArrowBackIcon
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="open drawer"
+              onClick={movieToMain}
+            >
+              <MenuIcon />
+            </ArrowBackIcon>
+          ) : null}
           <Typography className={classes.title} variant="h6" noWrap>
             Choose the country
           </Typography>

@@ -3,10 +3,8 @@ import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 import { URL_Search } from "../../constants";
@@ -14,18 +12,30 @@ import { AppContext } from "../../context/appContext";
 
 const useStyles = makeStyles({
   root: {
-    width: 600,
+    width: 800,
     display: "flex",
     justifyContent: "space-between",
+    margin: "10% auto 10% auto",
+    cursor: "default",
   },
   media: {
     height: 400,
+    width: 600,
+    cursor: "default",
   },
   content: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     width: "100%",
     height: "100%",
+    cursor: "default",
+  },
+  description: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    flexDirection: "column",
+    height: "100%",
+    cursor: "default",
   },
 });
 
@@ -56,26 +66,26 @@ const CountryDescription = (props) => {
     <Card className={classes.root}>
       <CardActionArea className={classes.content}>
         <CardMedia className={classes.media} image={country.flag} />
-        <CardContent>
+        <CardContent className={classes.description}>
           <Typography gutterBottom variant="h5" component="h2">
             Hello I'm {country.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            <p>Capital: {country.capital}</p>
+            <p>
+              Languages:{" "}
+              {country.languages.map((language) => language.name).join(" ")}
+            </p>
+            <p>
+              Currencies:{" "}
+              {country.currencies.map((currency) => currency.name).join(" ")}
+            </p>
+            <p>Population: {country.population}</p>
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   ) : (
-    //   <div className={classes.description}>
-    //     <h1>Hello I'm {country.name}</h1>
-    //     <img src={country.flag} alt="flag" />
-    //     <p>{country.capital}</p>
-    //     <p>{country.languages.map((language) => language.name).join(" ")}</p>
-    //     <p>{country.currencies.map((currency) => currency.name).join(" ")}</p>
-    //     <p>{country.population}</p>
-    //   </div>
     <div>Nothing</div>
   );
 };
