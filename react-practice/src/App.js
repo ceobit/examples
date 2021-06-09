@@ -1,14 +1,17 @@
 import React, { useContext, useEffect } from "react";
 import axios from "axios";
+import { Router } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/Header/Header";
 import { AppContext } from "./context/appContext";
 import { URL } from "./constants";
-import CardList from "./components/CardList/CardList";
+import { useRoutes } from "./routes";
+import { history } from "./history";
 
 function App() {
   const [state, setState] = useContext(AppContext);
+  const routes = useRoutes();
 
   useEffect(() => {
     (async () => {
@@ -25,7 +28,8 @@ function App() {
   return (
     <>
       <Header />
-      <CardList />
+      <Router history={history}>{routes}</Router>
+      {/*<CardList />*/}
     </>
   );
 }

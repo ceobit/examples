@@ -1,13 +1,20 @@
 import React from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import CountryDescription from "./components/CountryDescription/CountryDescription";
+import CardList from "./components/CardList/CardList";
 
 export const useRoutes = () => {
+  console.log("here");
   return (
     <Switch>
-      <Route path="/" exact component={} />
-      <Route path="/main" component={} />
-      <Route path="/register" component={} />
-      <Redirect from="*" to="/" />
+      <Route path="/" exact component={CardList} />
+      <Route
+        path="country/:id"
+        render={(props) => {
+          return <CountryDescription {...props} />;
+        }}
+      />
+      />
     </Switch>
   );
 };

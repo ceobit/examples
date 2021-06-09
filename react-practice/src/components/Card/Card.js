@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -21,10 +23,11 @@ const useStyles = makeStyles({
 
 export default function MediaCard({ img, title, population, capital }) {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea onClick={}>
+      <CardActionArea onClick={() => history.push(`/country/${title}`)}>
         <CardMedia className={classes.media} image={img} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
