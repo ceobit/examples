@@ -24,7 +24,7 @@ export default function MediaCard({ img, title, population, capital }) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea onClick={}>
         <CardMedia className={classes.media} image={img} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
