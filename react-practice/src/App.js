@@ -1,20 +1,47 @@
 import React from "react";
-import { Router } from "react-router-dom";
 
-import "./App.css";
-import Header from "./components/Header/Header";
-import { useRoutes } from "./routes";
-import { history } from "./history";
+const colors = ['red', 'green', 'blue', 'pink', 'yellow', 'gray', 'white', 'black', 'almond', 'brown'];
 
-function App() {
-  const routes = useRoutes();
-
-  return (
-    <>
-      <Header />
-      <Router history={history}>{routes}</Router>
-    </>
-  );
+export const getRandomColor = () => {
+  const randomIndex = Math.floor(Math.random() * 10);
+  return colors[randomIndex];
 }
 
-export default App;
+// should be replaced with some random one in your implementation
+
+export default function Counter() {
+
+  const [value, setValue] = React.useState(0);
+  const [color, setColor] = React.useState('null');
+
+  React.useEffect(() => {
+    setColor(getRandomColor());
+  }, [value]);
+
+  const increment = () => {
+    setValue(prev => prev-1);
+  }
+
+  const decrement = () => {
+    setValue(prev => prev+1);
+  }
+
+  const reset = () => {
+    setValue(0);
+  }
+
+  return (
+    <div style={{ borderTop: `10px solid ${color}` }}>
+      <div className="value">{value}</div>
+      <button className="increment" onClick={increment}>
+        -;
+      </button>
+      <button className="decrement" onClick={decrement}>
+        +
+      </button>
+      <button className="reset" onClick={reset}>
+        reset
+      </button>
+    </div>
+  )
+};

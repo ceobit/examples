@@ -1,14 +1,17 @@
 import React from "react";
 import "./App.css";
+import Input from "./components/Input/input";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      list: [],
+    };
   }
 
   render() {
-    return <h1>Hello</h1>;
+    return <Input />;
   }
 }
