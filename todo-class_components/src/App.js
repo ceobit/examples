@@ -29,29 +29,42 @@ export default class App extends React.Component {
           { id: prev.list.length, task: text.trim(), isDone: false },
         ],
       }));
-      console.log(this.state);
     }
   };
 
-  completeTask = (itemToCheck) => {
+  completeTask = (id) => {
     //to finish task
 
-    console.log(itemToCheck);
-    const newArr = this.list.filter((item) => {
-      if (item.id === itemToCheck) {
-        // revers done
-        item.isdone = !item.isdone;
+    const { list } = this.state;
+    const newTodoItems = list.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          isDone: !item.isDone,
+        };
       }
       return item;
     });
-    this.setState(newArr);
+    this.setState({ list: newTodoItems });
+  };
+
+  removeTask = (id) => {
+    const { list } = this.state;
+    const newTodoItems = list.filter((item) => {
+      return item.id !== id;
+    });
+    this.setState({ list: newTodoItems });
   };
 
   render() {
     return (
       <>
         <Input createTask={this.createTask} />
-        <TaskList tasks={this.state.list} completeTask={this.completeTask} />
+        <TaskList
+          tasks={this.state.list}
+          completeTask={this.completeTask}
+          removeTask={this.removeTask}
+        />
       </>
     );
   }

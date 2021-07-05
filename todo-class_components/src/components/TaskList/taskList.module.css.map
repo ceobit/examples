@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"taskList.module.css"}
+{"version":3,"sourceRoot":"","sources":["taskList.module.scss"],"names":[],"mappings":"AAAA;EACE;EACA","file":"taskList.module.css"}
