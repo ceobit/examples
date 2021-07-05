@@ -9,6 +9,7 @@ class Input extends React.Component {
     };
   }
 
+  // local state for Form
   handleInput = (e) => {
     const { value } = e.target;
     this.setState({ text: value });
@@ -16,18 +17,18 @@ class Input extends React.Component {
 
   render() {
     return (
-      <form>
+      <form
+        onSubmit={(e) => {
+          this.props.createTask(this.state.text, e);
+          this.setState({ text: "" });
+        }}
+      >
         <input
           type="text"
           value={this.state.text}
           onChange={this.handleInput}
         />
-        <button
-          type="submit"
-          onClick={(e) => this.props.createTask(this.state.text, e)}
-        >
-          Create task
-        </button>
+        <button type="submit">Create task</button>
       </form>
     );
   }
