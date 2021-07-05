@@ -22,6 +22,12 @@ class Input extends React.Component {
           value={this.state.text}
           onChange={this.handleInput}
         />
+        <button
+          type="submit"
+          onClick={(e) => this.props.createTask(this.state.text, e)}
+        >
+          Create task
+        </button>
       </form>
     );
   }

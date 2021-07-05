@@ -11,7 +11,15 @@ export default class App extends React.Component {
     };
   }
 
+  createTask = (text, e) => {
+    e.preventDefault();
+    this.setState((prev) => ({
+      list: [...prev.list, text],
+    }));
+
+  };
+
   render() {
-    return <Input />;
+    return <Input createTask={this.createTask} />;
   }
 }
