@@ -3,11 +3,13 @@
   justify-content: space-between;
   width: 100%;
   padding: 2% 0;
+  border: 1px solid #a87cee;
 }
 
 .completeTask {
   text-decoration: line-through;
   background-color: #7ceec6;
+  opacity: .5;
 }
 
 .icon {

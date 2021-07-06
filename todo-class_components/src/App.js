@@ -58,14 +58,17 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <Input createTask={this.createTask} />
-        <TaskList
-          tasks={this.state.list}
-          completeTask={this.completeTask}
-          removeTask={this.removeTask}
-        />
-      </div>
+      <>
+        <h2 style={{ margin: "0 auto", textAlign: "center" }}>To Do List</h2>
+        <div className="container">
+          <Input createTask={this.createTask} />
+          <TaskList
+            tasks={this.state.list}
+            completeTask={this.completeTask}
+            removeTask={this.removeTask}
+          />
+        </div>
+      </>
     );
   }
 }
