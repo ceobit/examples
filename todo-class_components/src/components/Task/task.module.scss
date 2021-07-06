@@ -1,0 +1,16 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2% 0;
+}
+
+.completeTask {
+  text-decoration: line-through;
+  background-color: #7ceec6;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import style from "./input.module.css";
+
 class Input extends React.Component {
   constructor(props) {
     super(props);
@@ -18,12 +20,14 @@ class Input extends React.Component {
   render() {
     return (
       <form
+        className={style.form}
         onSubmit={(e) => {
           this.props.createTask(this.state.text, e);
           this.setState({ text: "" });
         }}
       >
         <input
+          className={style.input}
           type="text"
           value={this.state.text}
           onChange={this.handleInput}

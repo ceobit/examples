@@ -58,14 +58,14 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="container">
         <Input createTask={this.createTask} />
         <TaskList
           tasks={this.state.list}
           completeTask={this.completeTask}
           removeTask={this.removeTask}
         />
-      </>
+      </div>
     );
   }
 }

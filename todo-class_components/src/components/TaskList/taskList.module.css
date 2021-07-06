@@ -1,6 +1,6 @@
-.check {
-  width: 25px;
-  height: 25px;
+.list {
+  list-style: none;
+  margin: 5%;
 }
 
 /*# sourceMappingURL=taskList.module.css.map */

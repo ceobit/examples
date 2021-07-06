@@ -4,6 +4,9 @@ import {
   MdCheckBoxOutlineBlank,
   MdDeleteForever,
 } from "react-icons/md";
+import classnames from "classnames";
+
+import style from "./task.module.css";
 
 class Task extends React.Component {
   constructor(props) {
@@ -20,18 +23,28 @@ class Task extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        className={
+          this.props.el.isDone
+            ? classnames(style.task, style.completeTask)
+            : [style.task]
+        }
+      >
         {this.props.el.task}
-        {this.props.el.isDone ? (
-          <MdCheck />
-        ) : (
-          <div onClick={this.onDone}>
-            {" "}
-            <MdCheckBoxOutlineBlank />
-          </div>
-        )}
-        <div onClick={this.onRemove}>
-          <MdDeleteForever />
+        <div>
+          {this.props.el.isDone ? (
+            <span onClick={this.onDone} className={style.icon}>
+              <MdCheck />
+            </span>
+          ) : (
+            <span onClick={this.onDone} className={style.icon}>
+              {" "}
+              <MdCheckBoxOutlineBlank />
+            </span>
+          )}
+          <span onClick={this.onRemove} className={style.icon}>
+            <MdDeleteForever />
+          </span>
         </div>
       </div>
     );
